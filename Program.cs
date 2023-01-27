@@ -14,3 +14,8 @@ string[] ShortWordsArray(string[]incomeArray, int wordLength)
     }
     return newArray;
 }
+
+Console.WriteLine("Введите все слова в одну строку через пробел: ");
+// Считаем строку, разделим ее на слова, и внесем в массив)
+string[] array = Console.ReadLine().Split(' ').ToArray(); 
+// Console.WriteLine(String.Join(" ", array));
