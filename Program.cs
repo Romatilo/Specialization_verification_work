@@ -9,7 +9,9 @@ string[] ShortWordsArray(string[]incomeArray, int wordLength)
     {   
         if (incomeArray[i].Length <= wordLength)
             {
-                newArray[j] = incomeArray[i];
+                Array.Resize(ref newArray, j+1);    // Увеличим размер нового массива
+                newArray[j] = incomeArray[i];       
+                j++;
             }
     }
     return newArray;
@@ -19,3 +21,5 @@ Console.WriteLine("Введите все слова в одну строку ч�
 // Считаем строку, разделим ее на слова, и внесем в массив)
 string[] array = Console.ReadLine().Split(' ').ToArray(); 
 // Console.WriteLine(String.Join(" ", array));
+
+Console.WriteLine(String.Join(" ", ShortWordsArray(array, 3)));
