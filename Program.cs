@@ -20,6 +20,6 @@ string[] ShortWordsArray(string[]incomeArray, int wordLength)
 Console.WriteLine("Введите все слова в одну строку через пробел: ");
 // Считаем строку, разделим ее на слова, и внесем в массив)
 string[] array = Console.ReadLine().Split(' ').ToArray(); 
-// Console.WriteLine(String.Join(" ", array));
 
-Console.WriteLine(String.Join(" ", ShortWordsArray(array, 3)));
+Console.WriteLine($"\nЗаданный массив: [{String.Join("; ", array)}]");
+Console.WriteLine($"Новый массив:    [{String.Join("; ", ShortWordsArray(array, 3))}]");
